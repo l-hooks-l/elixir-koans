@@ -2,7 +2,7 @@ defmodule BlanksTest do
   use ExUnit.Case, async: true
 
   test "simple replacement" do
-    ast = quote do: 1 + ___
+    ast = quote do: 1 + 0
 
     assert Blanks.replace(ast, 37) == quote(do: 1 + 37)
   end
